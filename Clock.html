@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="clock.css">
+    <script src="clock.js"></script>
+</head>
+<body background="background-img.jpg">
+    
+    <div id="container">
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+    </div><br>
+    <center>
+    <p id="time" style="position:realative;height:1.5vw;width:30vw;background-color:black;color:white;border-radius:3px;"></p>
+    </center>
+
+    <script>
+
+        var tme=document.getElementById("time");
+        setInterval(()=>{
+            let t=new Date();
+            tme.innerHTML=t.toLocaleTimeString();
+        },1000);
+        
+       
+    </script>
+</body>
+</html>
